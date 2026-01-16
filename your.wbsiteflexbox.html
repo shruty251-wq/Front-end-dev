@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YourBrand - Flexbox Layout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>  
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fc;
+            color: #333;
+            padding-top: 80px; 
+        }
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .fixed-navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: linear-gradient(135deg, #ffffff, #ffffff);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center; 
+            justify-content: center;
+        }
+        nav {
+            display: flex; 
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 24px;
+            color: #7B68EE; 
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #000000; 
+            font-size: 14px;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        .nav-links li a:hover {
+            opacity: 0.8;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #7B68EE, #836FFF);
+            color: white;
+            padding: 80px 0 100px 0;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-content h2 {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            opacity: 0.95;
+            max-width: 800px;
+        }
+
+        .btn-white {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            
+            background-color: white;
+            color: #6a5acd;
+            padding: 12px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+        }
+
+        .features-section {
+            padding: 60px 0;
+        }
+
+        .features-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            width: 32%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #4169E1;
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .card p {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #555;
+        }
+        .about-section {
+            padding: 40px 0;
+        }
+
+        .about-box {
+            background: white;
+            padding: 60px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .about-box h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .about-box p {
+            color: #666;
+            line-height: 1.8;
+            max-width: 800px;
+            font-size: 14px;
+        }
+
+        
+        .contact-section {
+            padding: 60px 0;
+            
+    
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-section h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #222;
+        }
+
+        .contact-form {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input, 
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        .contact-form input:focus, 
+        .contact-form textarea:focus {
+            outline: none;
+            border-color: #6a5acd;
+        }
+
+        .btn-blue {
+            background-color: #4169E1;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            align-self: flex-start; /* Flex item alignment */
+            transition: background 0.3s;
+        }
+
+        .btn-blue:hover {
+            background-color: #3151b5;
+        }
+
+        /* --- 6. FOOTER --- */
+        footer {
+            background-color: #222;
+            color: #888;
+            padding: 40px 0;
+            margin-top: 60px;
+
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        footer a {
+            color: #4169E1;
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="fixed-navbar">
+        <div class="container">
+            <nav>
+                <div class="logo">YourBrand</div>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <header class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Welcome to Something Awesome</h1>
+                <h2>A beautiful fixed-width website built with pure HTML & CSS. No responsiveness.<br>No JavaScript. Just classic web.</h2>
+                <a href="#" class="btn-white">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="features-section">
+        <div class="container features-grid">
+            <div class="card">
+                <h3>Fast & Lightweight</h3>
+                <p>No media queries, no mobile menu, no bloat. Pure desktop perfection.</p>
+            </div>
+            <div class="card">
+                <h3>Pixel-Perfect Control</h3>
+                <p>Everything stays exactly where you put it — on every screen size.</p>
+            </div>
+            <div class="card">
+                <h3>Classic Web Feel</h3>
+                <p>Like it's 2010 again — but prettier. Horizontal scroll on small screens? Yes please!</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <div class="about-box">
+                <h2>About This Non-Responsive Layout</h2>
+                <p>This layout is deliberately fixed at 1000px wide and will never adapt. On phones? You'll get a tiny zoomed-out version with horizontal scrolling — just like the good old days. No hamburger menus, no collapsing columns, no viewport tricks. Pure, unapologetic desktop design.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container contact-section"> <h2>Get In Touch</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn-blue">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 YourBrand. Proudly non-responsive since 2025.</p>
+            <p><a href="#">Privacy Policy</a> - <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

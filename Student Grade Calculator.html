@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Student Grade Calculator</title>
+</head>
+<body>
+    <Script>
+        let marks = parseInt(prompt("enter your marks (0-100)"));
+        let Grade
+        if(marks >= 90 && marks <=100){
+            Grade = "A+";
+        }else if (marks >= 80 && marks < 90){
+            Grade = "A";
+        }else if (marks >= 70 && marks < 80){
+            Grade = "B";
+        }else if (marks >= 60 && marks < 70){
+            Grade = "C";
+        }else if (marks >= 50 && marks < 60){
+            Grade = "D";
+        }else if (marks < 50 && marks >= 0){
+            Grade = "Fail";
+        } else {
+            Grade = "Invalid Marks";
+        }
+
+        alert("your Grade is:" + Grade);
+    </Script>
+</body>
+</html>

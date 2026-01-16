@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the Largest of Three Numbers</title>
+</head>
+<body>
+    <script>
+        let n1 = parseFloat(prompt("Enter first number:"));
+        let n2 = parseFloat(prompt("Enter second number:"));
+        let n3 = parseFloat(prompt("Enter third number:"));
+
+        let Largest ;
+         if (n1 >= n2 && n1 >= n3){
+            Largest = n1;
+         }else if (n2 >= n1 && n2 >= n3){
+            Largest = n1;
+         }else if ( n2 >= n1 && n2 >= n3){
+            Largest = n2;
+         } else {
+            Largest = n3;
+         }
+
+         alert("the largest number is :" + Largest);
+    </script>
+</body>
+</html>

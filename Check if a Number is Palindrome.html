@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check if a Number is Palindrome</title>
+</head>
+<body>
+    <script>
+        let original = prompt("enter a number to check palindrome:");
+        let reversed = original.split('').reverse().join(' ');
+        if (original === reversed){
+            alert(original +"is a palindrome.");
+        } else {
+            alert(original + "is NOT a Palindrome.");
+        }
+    </script>
+</body>
+</html>
