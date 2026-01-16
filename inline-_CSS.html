@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment of padding,margin</title>
+    
+</head>
+<body>
+    <div id="Container" style="height: 100vh ; width:100vw ;  padding-bottom: 190px;">
+    <div id="header" style="background-color: rgb(88, 119, 255); height: 150px; width: 99%;">
+        <h1 style="color: white; text-align: center; padding-top: 20px;">Float-Based Web layout</h1>
+
+        <div style="background-color: rgb(40, 181, 247); height: 50px; margin:0px 40px 0px 40px; float: left; width: 90%;">
+            <div style="float: left; background-color: rgb(106, 203, 248); margin-left: 30px ;width: 23%;  text-align: center; margin-top: 6px; padding: 10px 0px 10px 0px;">Home</div>
+
+            <div style="float: left; background-color: rgb(106, 203, 248); margin-left: 15px; width: 23%;  text-align: center; margin-top: 6px; padding: 10px 0px 10px 0px;">About</div>
+
+            <div style="float: left;background-color: rgb(106, 203, 248); margin-left: 15px;width: 23%; text-align: center; margin-top: 6px; padding: 10px 0px 10px 0px;">Services</div>
+
+            <div style="float: left;background-color: rgb(106, 203, 248); margin-left: 15px;width: 23%; text-align: center; margin-top: 6px; padding: 10px 0px 10px 0px;">Contact</div>
+        </div>
+    </div>
+
+    <div id="Content" >
+        
+
+        <div style="background-color: rgb(213, 255, 213); height: 350px; width: 19%; float: left; padding-left: 15px; margin:10px 0px 0px 10px;">
+            <br><b>Sidebar</b>
+            <br><br>
+             <p>Menu Item 1</p>
+             <div style="width: 93%;  border: 1px solid rgb(80, 80, 80);"></div>
+             <p>Menu Item 2</p>
+              <div style="width: 93%;  border: 1px solid rgb(80, 80, 80);"></div>
+             <p>Menu Item 3</p>
+              <div style="width: 93%;  border: 1px solid rgb(80, 80, 80);"></div>
+             <p>Menu Item 4</p>
+              <div style="width: 93%;  border: 1px solid rgb(80, 80, 80);"></div>
+             <p>Menu Item 5</p>
+        </div>
+
+        <div style="background-color: rgb(255, 233, 246); height: 350px; width: 76%; float: left; margin: 10px 15px 0px 0px; padding-left: 15px;">
+            
+            <h3>Main Content Area</h3>
+            <br>
+            <p>This layout is created ising CSS float properties. The sidebar is floated left, and the main content is floated right.</p>
+
+            <div style="width: 37%; background-color: rgb(228, 201, 201);margin-top: 48px; float: left;"> 
+             <div style="padding-left: 15px; padding-top: 20px;"><b>Float Column 1</b></div>
+                
+                <p style="padding-left: 15px;">This column is floatedleft. Float was commonly used for layouts before Firefox and CSS Grid.
+
+                </p><br>
+            </div>
+
+            <div style="width: 55%; background-color: rgb(228, 201, 201);margin-top: 48px; margin-left: 50px; float: left; " >
+                <div style="padding-left: 15px; padding-top: 20px;" >
+                    <b>Float Column 2</b>
+                    <p>This Column is also floated left. Using float for layout requires careful clearing of floats.</p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: rgb(255, 231, 154); width: 96.5%; margin: 380px 0px 0px 10px;padding-top: 20px; padding-left: 10px; ">
+        
+            <b>About Float Layouts</b>
+            <p >Css float is a property that positions an element to the lefty or right of its container, allowing text and inline elements to wrap around it.  </p>
+            <p>While float is still useful for wrapping text around images, it's no longer to prefered method for creating complex page layouts.</p><br>
+        
+    </div>
+
+    <div id="Footer" style="margin: 50px 0px 0px 0px; background-color: #719dd6; text-align: center;  color: white; padding-top: 20px;height: 40px; width: 99%;">@ 2023 Float Layout Example. All rights reserved. </div>
+    </div>
+
+    
+</body>
+
+</html>
